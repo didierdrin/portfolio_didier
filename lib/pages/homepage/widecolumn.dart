@@ -93,7 +93,7 @@ class WidePageState extends State<WidePage> {
                   children: [
                     Text('Hey, I\'m Didier Ns.', style: titlestyle,),
                     SizedBox(height: 20,),
-                    Text('Cross platform designer and developer from Toronto, CA.\n I create custom web, android, and iOS apps\n to help businesses do better online.', style: normalstyle,),
+                    Text('Cross platform designer and developer from Toronto, CA.\nI create custom web, android, and iOS apps\nto help businesses do better online.\nFor the good of my customer I go extramile', style: normalstyle,),
                   ],
                 ),
               ),
