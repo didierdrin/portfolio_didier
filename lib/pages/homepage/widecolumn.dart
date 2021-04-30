@@ -117,6 +117,7 @@ class WidePageState extends State<WidePage> {
                       Padding(
                         padding: EdgeInsets.only(left: 20, right: 20),
                         child: SizedBox(
+                          width: 400,
                           child: Text(
                         'Cross platform designer and developer from Toronto, CA. I create custom web, android, and iOS apps, to help businesses do better online. For the good of my customers I go extramile.',
                         style: normalstyle,
