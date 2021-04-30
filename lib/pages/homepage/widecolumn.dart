@@ -28,7 +28,7 @@ class WidePageState extends State<WidePage> {
           child: IconButton(
               onPressed: () {},
               icon: Icon(
-                Icons.lightbulb,
+                Icons.lightbulb_outline_rounded,
                 color: Color(0xFFffd700),
               )),
         ),
@@ -114,10 +114,15 @@ class WidePageState extends State<WidePage> {
                       SizedBox(
                         height: 20,
                       ),
-                      Text(
-                        'Cross platform designer and developer from Toronto, CA.\nI create custom web, android, and iOS apps,\nto help businesses do better online.\nFor the good of my customers I go extramile.',
+                      Padding(
+                        padding: EdgeInsets.only(left: 20, right: 20),
+                        child: SizedBox(
+                          child: Text(
+                        'Cross platform designer and developer from Toronto, CA. I create custom web, android, and iOS apps, to help businesses do better online. For the good of my customers I go extramile.',
                         style: normalstyle,
                       ),
+                        ),
+                        ),
                       SizedBox(
                         height: 30,
                       ),
