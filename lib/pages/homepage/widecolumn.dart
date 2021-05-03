@@ -1,6 +1,7 @@
 // Wide Column
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 // Page imports
 
 class WidePage extends StatefulWidget {
@@ -16,7 +17,8 @@ class WidePageState extends State<WidePage> {
       fontWeight: FontWeight.w500, fontSize: 20, color: Colors.grey);
   TextStyle normalstyle = GoogleFonts.montserrat(
       fontWeight: FontWeight.normal, fontSize: 18, color: Colors.grey[400]);
-  TextStyle textbuttonnormal = GoogleFonts.montserrat(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white);
+  TextStyle textbuttonnormal = GoogleFonts.montserrat(
+      fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +48,9 @@ class WidePageState extends State<WidePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      _launcher();
+                    },
                     child: Text(
                       'Projects',
                       style: minititlestyle,
@@ -119,17 +123,20 @@ class WidePageState extends State<WidePage> {
                         child: SizedBox(
                           width: 400,
                           child: Text(
-                        'Cross platform designer and developer from Toronto, CA. I create custom web, android, and iOS apps, to help businesses do better online. For the good of my customers I go extramile.',
-                        style: normalstyle,
+                            'Cross platform designer and developer from Toronto, CA. I create custom web, android, and iOS apps, to help businesses do better online. For the good of my customers I go extramile.',
+                            style: normalstyle,
+                          ),
+                        ),
                       ),
-                        ),
-                        ),
                       SizedBox(
                         height: 30,
                       ),
                       TextButton(
                         onPressed: () {},
-                        child: Text('Download / CV', style: textbuttonnormal,),
+                        child: Text(
+                          'Download / CV',
+                          style: textbuttonnormal,
+                        ),
                         style: TextButton.styleFrom(
                           padding: EdgeInsets.all(25),
                           backgroundColor: Color(0xFF115173),
@@ -162,5 +169,15 @@ class WidePageState extends State<WidePage> {
         ),
       ),
     );
+  }
+
+  _launcher() async {
+    const url = 'https://github.com/didierdrin';
+    if (await canLaunch(url)) {
+      await launch(url,
+          forceSafariVC: true, forceWebView: true, enableJavaScript: true);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
