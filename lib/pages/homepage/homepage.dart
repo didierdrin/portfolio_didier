@@ -5,7 +5,7 @@ import 'widecolumn.dart';
 import 'mobilecolumn.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key, this.title}) : super(key: key);
+  HomePage({super.key, required this.title});
   final String title;
   @override
   State<StatefulWidget> createState() => HomePageState();

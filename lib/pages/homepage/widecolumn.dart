@@ -5,7 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 // Page imports
 
 class WidePage extends StatefulWidget {
-  WidePage({Key key}) : super(key: key);
+  WidePage({super.key});
   @override
   State<StatefulWidget> createState() => WidePageState();
 }

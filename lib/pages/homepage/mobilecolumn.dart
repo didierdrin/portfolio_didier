@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MobilePage extends StatefulWidget {
-  MobilePage({Key key}) : super(key: key);
+  const MobilePage({super.key});
   @override
   State<StatefulWidget> createState() => MobilePageState();
 }
@@ -117,28 +117,44 @@ class MobilePageState extends State<MobilePage> {
                 Padding(
                   padding: EdgeInsets.only(left: 40, right: 40, bottom: 50),
                   child: SizedBox(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      IconButton(
-                        onPressed: (){}, 
-                        icon: FaIcon(FontAwesomeIcons.twitter, color: Colors.blueAccent, size: 40,),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(
+                            FontAwesomeIcons.twitter,
+                            color: Colors.blueAccent,
+                            size: 40,
+                          ),
                         ),
-                      IconButton(
-                        onPressed: (){}, 
-                        icon: FaIcon(FontAwesomeIcons.whatsapp, color: Colors.greenAccent, size: 40,),
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(
+                            FontAwesomeIcons.whatsapp,
+                            color: Colors.greenAccent,
+                            size: 40,
+                          ),
                         ),
-                      IconButton(
-                        onPressed: (){}, 
-                        icon: FaIcon(FontAwesomeIcons.instagram, color: Colors.redAccent, size: 40,),
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(
+                            FontAwesomeIcons.instagram,
+                            color: Colors.redAccent,
+                            size: 40,
+                          ),
                         ),
-                      IconButton(
-                        onPressed: (){}, 
-                        icon: FaIcon(FontAwesomeIcons.google, color: Colors.white, size: 40,),
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(
+                            FontAwesomeIcons.google,
+                            color: Colors.white,
+                            size: 40,
+                          ),
                         ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
                 ),
               ],
             ),
